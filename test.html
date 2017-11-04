@@ -1,0 +1,45 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<title>
+			object creation(constructor)
+		</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	</head>
+
+
+
+<body>
+
+	<div id="content"></div>
+
+
+
+<script type="text/javascript">
+	
+	function person(first, last, age, role){
+		this.firstname=first;
+		this.lastname=last;
+		this.age=age;
+		this.role=role;
+	}
+	
+	var father= new person("Bharat", "Gurung", 60, "teacher");
+	var mother=new person("Pan", "Gurung", 58, "house Wife");
+	var son=new person("Tika", "Gurung", 33, "programmer");
+		
+	document.write("My dad's name is "+father.firstname+" "+father.lastname+"<br>");
+	// inserting into the div
+	document.getElementById("content").innerHTML="My Mom's name is "+mother.firstname+" "+mother.lastname;
+
+
+	// or creating div jquery method 
+
+	var beta=$("<div>");
+	beta.html("My Name is "+son.firstname+" "+son.lastname);
+	$("#content").append(beta);
+
+</script>
+</body>
+</html>
